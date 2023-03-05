@@ -1,0 +1,196 @@
+html, body {
+    height: 100%;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.menu {
+    margin-right: 100px;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item + .menu__item {
+    margin-left: 50px;
+}
+
+.auth {
+    display: flex;
+}
+
+.auth__item + .auth__item {
+    margin-left: 30px;
+}
+
+.auth__link {
+    padding: 11px 30px;
+    border-radius: 7px;
+    transition: all .5s;
+}
+
+.auth__link:hover {
+    background: #E23D3D;
+    color: #FFF;
+}
+
+.intro {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    color: #FFF;
+}
+
+.intro__inner {
+    padding-top: 130px;
+}
+
+.intro__title {
+    max-width: 505px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.intro__text {
+    max-width: 715px;
+    margin-bottom: 30px;
+}
+
+.intro__btn {
+    margin-bottom: 150px;
+}
+
+.btn {
+    color: #FFF;
+    padding: 11px 30px;
+    background: #E23D3D;
+    border-radius: 7px;
+    transition: all .5s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e29a3d;
+}
+
+.intro__panel {
+    background-color: #FFF;
+    padding: 0 50px;
+    border-radius: 14px;
+    color: #858181;
+    max-width: 1030px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 108px;
+    align-items: center;
+}
+
+.intro__panel-item {
+    margin-left: 34px;
+}
+
+.location {
+    cursor: pointer;
+    position: relative;
+}
+
+.location::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/location.svg);
+    top: 0;
+    left: -32px;
+}
+
+.location::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/choice.svg);
+    top: 1px;
+    right: -32px;
+}
+
+.start-date {
+    cursor: pointer;
+    position: relative;
+}
+
+.start-date::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/calendar.svg);
+    top: 1px;
+    left: -32px;
+}
+
+.start-date::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/choice.svg);
+    top: 1px;
+    right: -32px;
+}
+
+.end-date {
+    cursor: pointer;
+    position: relative;
+}
+
+.end-date::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/calendar.svg);
+    top: 1px;
+    left: -32px;
+}
+
+.end-date::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/choice.svg);
+    top: 1px;
+    right: -32px;
+}
