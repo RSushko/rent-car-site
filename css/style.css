@@ -295,3 +295,606 @@ html, body {
     margin: 0 auto;
     padding-bottom: 100px;
 }
+
+.service__box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.service__left {
+    text-align: start;
+    counter-reset: number 0; 
+}
+
+.service-left-item {
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 48px;
+    counter-increment: number;
+}
+
+.service-left-item + .service-left-item {
+    margin-top: 26px;
+}
+
+.service-left-item::before {
+    position: absolute;
+    content: counter(number);
+    top: 0;
+    left: 0;
+}
+
+.service-left-item::after {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px dashed rgb(255, 255, 255);
+    top: -6px;
+    left: -18px;
+}
+
+.service__right {
+    position: relative;
+}
+
+.service__right::after {
+    position: absolute;
+    content: '';
+    height: 184px;
+    width: 1px;
+    background-color: #FFF;
+    top: 0;
+    left: -100px;
+}
+
+.service__right-content {
+    margin-top: 62px;
+    text-align: start;
+}
+
+.service__right-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+}
+
+.service__right-text {
+    line-height: 120%;
+}
+
+.car__inner {
+    padding-top: 200px;
+    text-align: center;
+    margin-bottom: 400px;
+}
+
+.car__title {
+    max-width: 640px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.car__panel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.car__btn {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    padding: 11px 40px;
+    background-color: transparent;
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.car__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car__item {
+    padding: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
+}
+
+.car__img {
+    border-radius: 14px;
+}
+
+.car__item-title {
+    text-align: start;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.car__price {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.car__price-full {
+    color: #E23D3D;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 35px;
+}
+
+.car__price-month {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #858181;
+}
+
+.car__price-month span {
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.car__feature {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #DFDFDF;
+    color: #858181;
+    margin-bottom: 15px;
+}
+
+.car__feature-mileage {
+    margin-left: 34px;
+    position: relative;
+}
+
+.car__feature-mileage::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/speed.svg);
+    top: 0;
+    left: -34px;
+}
+
+.car__feature-transmission {
+    position: relative;
+}
+
+.car__feature-transmission::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/auto.svg);
+    top: 1px;
+    left: -30px;
+}
+
+.car__feature-fuel {
+    position: relative;
+}
+
+.car__feature-fuel::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/fuel.svg);
+    top: 1px;
+    left: -30px;
+}
+
+.car__feature-btn {
+    padding: 11px 92px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    color: #FFF;
+    background-color: #E23D3D;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.car__arrow {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.car__arrow-left + .car__arrow-right {
+    margin-left: 30px;
+}
+
+.car__arrow-left, .car__arrow-right {
+    cursor: pointer;
+}
+
+.customer {
+    margin-bottom: 400px;
+}
+
+.customer__inner {
+    text-align: center;
+}
+
+.customer__title {
+    margin: 0 auto;
+    max-width: 626px;
+}
+
+.customer__text {
+    color: #858181;
+    max-width: 532px;
+    margin: 0 auto;
+}
+
+.customer__car {
+    padding-top: 107px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer__car-left {
+    margin-left: 49px;
+}
+
+.customer__car-right {
+    margin-right: 53px;
+}
+
+.customer__car-left {
+    padding-top: 80px;
+}
+
+.customer__car-right {
+    padding-top: 30px;
+}
+
+.customer__item-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #212121;
+}
+
+.customer__item-img {
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+}
+
+.customer__item-title {
+    padding-top: 30px;
+}
+
+.pricing {
+    position: relative;
+}
+
+.pricing::after {
+    position: absolute;
+    content: '';
+    width: 204px;
+    height: 43px;
+    background-image: url(../images/icons/customer-line-1.svg);
+    top: 38px;
+    right: -145px;
+}
+
+.budget {
+    max-width: 175px;
+    position: relative;
+}
+
+.budget::after {
+    position: absolute;
+    content: '';
+    width: 216px;
+    height: 13px;
+    background-image: url(../images/icons/customer-line-2.svg);
+    top: 32px;
+    right: -187px;
+}
+
+.payment {
+    max-width: 183px;
+    position: relative;
+}
+
+.payment::after {
+    position: absolute;
+    content: '';
+    width: 216px;
+    height: 13px;
+    background-image: url(../images/icons/customer-line-2.svg);
+    top: 32px;
+    right: -187px;
+}
+
+.warrant {
+    position: relative;
+    max-width: 222px;
+}
+
+.warrant::before {
+    position: absolute;
+    content: '';
+    width: 204px;
+    height: 43px;
+    background-image: url(../images/icons/customer-line-3.svg);
+    top: 36px;
+    left: -153px
+}
+
+.assistance {
+    position: relative;
+    margin-left: 40px;
+    max-width: 190px;
+}
+
+.assistance::before {
+    position: absolute;
+    content: '';
+    width: 216px;
+    height: 13px;
+    background-image: url(../images/icons/customer-line-4.svg);
+    top: 30px;
+    left: -180px;   
+}
+
+.choice {
+    max-width: 177px;
+    position: relative;
+    margin-left: 45px;
+}
+
+.choice::before {
+    position: absolute;
+    content: '';
+    width: 216px;
+    height: 13px;
+    background-image: url(../images/icons/customer-line-4.svg);
+    top: 30px;
+    left: -180px;   
+}
+
+.customer__item + .customer__item {
+    margin-top: 91px;
+}
+
+.investors__title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.investors__box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1012px;
+    margin: 0 auto;
+    margin-bottom: 138px;
+}
+
+.investors__box::after {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 171px;
+    background-image: url(../images/icons/investors_line.svg);
+    bottom: -73px;
+    left: 40%;
+}
+
+.investors__item {
+    max-width: 193px;
+    text-align: center;
+}
+
+.investors__name {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 32px;
+    color: #212121;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+.investors__job {
+    font-size: 16px;
+    line-height: 26px;
+    color: #858181;
+}
+
+.investors__company {
+    display: flex;
+    justify-content: space-between;
+    max-width: 605px;
+    margin: 0 auto;
+    margin-bottom: 400px;
+}
+
+.contacts__inner {
+    max-width: 714px;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #11110F;
+}
+
+.contacts__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #212121;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+input {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #4F4F4F;
+    opacity: 0.6;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding-left: 22px;
+}
+
+.form__title {
+    margin-bottom: 11px;
+}
+
+.form__name {
+    max-width: 714px;
+    width: 100%;
+    height: 53px;
+    margin-bottom: 20px;
+}
+
+.form__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__email-wrapper, .form__tel-wrapper {
+    max-width: 332px;
+    width: 100%;
+}
+
+.form__email-title, .form__tel-title {
+    margin-bottom: 12px;
+}
+
+.form__email {
+    max-width: 332px;
+    width: 100%;
+    height: 53px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #4F4F4F;
+    opacity: 0.6;
+}
+
+.form__tel {
+    max-width: 332px;
+    width: 100%;    
+    height: 53px;
+}
+
+.textarea__title {
+    padding-top: 22px;
+    margin-bottom: 12px;
+}
+
+.form__message {
+    max-width: 714px;
+    width: 100%;
+    height: 94px;
+    resize: none;
+    margin-bottom: 48px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding-top: 19px;
+    padding-left: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #4F4F4F;
+    opacity: 0.6;
+}
+
+.form__button-wrapper {
+    text-align: center;
+}
+
+.form__button {
+    padding: 11px 30px;
+    background: #E23D3D;
+    border-radius: 7px;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    padding-top: 220px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer__menu {
+    display: flex;
+}
+
+.footer__menu-item + .footer__menu-item {
+    margin-left: 60px;
+}
+
+.footer__icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer__icon + .footer__icon {
+    margin-left: 30px;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid #D4D4D8;
+    color: #858181;
+}
+
+.footer__copyright-text {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.footer__agreement-wrapper {
+    display: flex;
+}
+
+.footer__agreement {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.footer__agreement + .footer__agreement {
+    margin-left: 40px;
+}
