@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">  
 
     <title>Rent Car</title>
 </head>
@@ -16,37 +16,60 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <div class="header__inner">
+                <nav class="nav">
                     <div class="logo">
                         <a href="" class="logo__link">
                             <img src="./images/logo.svg" alt="logo" class="logo__img">
                         </a>
                     </div>
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Rent</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Share</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Ride</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Service</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="auth">
-                        <div class="auth__item">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Rent</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Share</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Ride</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Service</a>
+                        </li>
+                    </ul>
+                    <ul class="auth">
+                        <li class="auth__item">
                             <a href="#" class="auth__link">Sign Up</a>
-                        </div>
-                        <div class="auth__item">
+                        </li>
+                        <li class="auth__item">
                             <a href="#" class="auth__link">Sign in</a>
-                        </div>
-                    </div>
-                </div>
+                        </li>
+                    </ul>
+                    <button class="menu__btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="menu__mobile">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Rent</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Share</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Ride</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Service</a>
+                        </li>
+                        <li class="auth__item">
+                            <a href="#" class="auth__link">Sign Up</a>
+                        </li>
+                        <li class="auth__item">
+                            <a href="#" class="auth__link">Sign in</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main class="main">
@@ -71,7 +94,7 @@
                     </div>
                 </div>
             </section>
-            <section class="steps">
+           <section class="steps">
                 <div class="container">
                     <div class="steps__inner">
                         <h6 class="steps__suptitle">How It Work</h6>
@@ -102,7 +125,7 @@
                     </div>
                 </div>
             </section>
-            <section class="service">
+              <section class="service">
                 <div class="container">
                     <div class="service__inner">
                         <h6 class="service__suptitle">Best Service</h6>
@@ -130,88 +153,156 @@
                     <div class="car__inner">
                         <h6 class="car__suptitle">Best Service</h6>
                         <h2 class="car__title title">Explore Our Top Deal From Top-Rated Dealer</h2>
-                            <div class="car__panel">
-                                <button class="car__btn">Audi</button>
-                                <button class="car__btn">BMW</button>
-                                <button class="car__btn">Honda</button>
-                                <button class="car__btn">Toyota</button>
-                                <button class="car__btn">Nissan</button>
-                                <button class="car__btn">Mazda</button>
-                                <button class="car__btn">Citron</button>
-                                <button class="car__btn">Explore 20+</button>
+                        <div class="swiper-container-panel">
+                            <div class="car__panel swiper-wrapper">
+                                <button class="car__btn swiper-slide" data-filter=".audi">Audi</button>
+                                <button class="car__btn swiper-slide" data-filter=".bmw">BMW</button>
+                                <button class="car__btn swiper-slide" data-filter=".honda">Honda</button>
+                                <button class="car__btn swiper-slide" data-filter=".toyota">Toyota</button>
+                                <button class="car__btn swiper-slide" data-filter=".nissan">Nissan</button>
+                                <button class="car__btn swiper-slide" data-filter=".mazda">Mazda</button>
+                                <button class="car__btn swiper-slide" data-filter=".citron">Citron</button>
+                                <button class="car__btn swiper-slide" data-filter=".ford">Ford</button>
                             </div>
-                            <div class="car__box">
-                                <div class="car__item">
-                                    <img src="./images/car-1.jpg" alt="img" class="car__img" width="265px">
-                                    <h3 class="car__item-title">Audi Q3</h3>
-                                    <div class="car__price">
-                                        <div class="car__price-full">$50,850</div>
-                                        <div class="car__price-month">$508<span>/month</span></div>
+                        </div>
+                            <div class="swiper-container">
+                                <div class="car__box  swiper-wrapper">
+                                    <div class="car__item swiper-slide mix audi">
+                                        <img src="./images/car-1.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q3</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$50,850</div>
+                                            <div class="car__price-month">$508<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
                                     </div>
-                                    <div class="car__feature">
-                                        <div class="car__feature-mileage">15k</div>
-                                        <div class="car__feature-transmission">Auto</div>
-                                        <div class="car__feature-fuel">Diesel</div>
+                                    <div class="car__item swiper-slide mix audi">
+                                        <img src="./images/car-2.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q4</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$55,850</div>
+                                            <div class="car__price-month">$408<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
                                     </div>
-                                    <div class="car__feature-wrapper">
-                                        <button class="car__feature-btn">Rent Now</button>
+                                    <div class="car__item swiper-slide mix audi">
+                                        <img src="./images/car-3.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q5</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$70,550</div>
+                                            <div class="car__price-month">$600<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
                                     </div>
+                                    <div class="car__item swiper-slide mix audi">
+                                        <img src="./images/car-4.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q7</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$90,900</div>
+                                            <div class="car__price-month">$900<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="car__item swiper-slide mix bmw">
+                                        <img src="./images/car-4.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q7</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$90,900</div>
+                                            <div class="car__price-month">$900<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="car__item swiper-slide mix bmw">
+                                        <img src="./images/car-1.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q3</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$50,850</div>
+                                            <div class="car__price-month">$508<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="car__item swiper-slide mix bmw">
+                                        <img src="./images/car-1.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q3</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$50,850</div>
+                                            <div class="car__price-month">$508<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
+                                    </div>   
+                                    <div class="car__item swiper-slide mix bmw"> 
+                                        <img src="./images/car-1.jpg" alt="img" class="car__img" width="265px">
+                                        <h3 class="car__item-title">Audi Q3</h3>
+                                        <div class="car__price">
+                                            <div class="car__price-full">$50,850</div>
+                                            <div class="car__price-month">$508<span>/month</span></div>
+                                        </div>
+                                        <div class="car__feature">
+                                            <div class="car__feature-mileage">15k</div>
+                                            <div class="car__feature-transmission">Auto</div>
+                                            <div class="car__feature-fuel">Diesel</div>
+                                        </div>
+                                        <div class="car__feature-wrapper">
+                                            <button class="car__feature-btn">Rent Now</button>
+                                        </div>
+                                    </div>                                    
                                 </div>
-                                <div class="car__item">
-                                    <img src="./images/car-2.jpg" alt="img" class="car__img" width="265px">
-                                    <h3 class="car__item-title">Audi Q4</h3>
-                                    <div class="car__price">
-                                        <div class="car__price-full">$55,850</div>
-                                        <div class="car__price-month">$408<span>/month</span></div>
+                                <div class="car__arrow">
+                                    <div class="car__arrow-left">
+                                        <img src="./images/icons/car-arrow-left.svg" alt="arrow">
                                     </div>
-                                    <div class="car__feature">
-                                        <div class="car__feature-mileage">15k</div>
-                                        <div class="car__feature-transmission">Auto</div>
-                                        <div class="car__feature-fuel">Diesel</div>
+                                    <div class="car__arrow-right">
+                                        <img src="./images/icons/car-arrow-right.svg" alt="arrow">
                                     </div>
-                                    <div class="car__feature-wrapper">
-                                        <button class="car__feature-btn">Rent Now</button>
-                                    </div>
-                                </div>
-                                <div class="car__item">
-                                    <img src="./images/car-3.jpg" alt="img" class="car__img" width="265px">
-                                    <h3 class="car__item-title">Audi Q5</h3>
-                                    <div class="car__price">
-                                        <div class="car__price-full">$70,550</div>
-                                        <div class="car__price-month">$600<span>/month</span></div>
-                                    </div>
-                                    <div class="car__feature">
-                                        <div class="car__feature-mileage">15k</div>
-                                        <div class="car__feature-transmission">Auto</div>
-                                        <div class="car__feature-fuel">Diesel</div>
-                                    </div>
-                                    <div class="car__feature-wrapper">
-                                        <button class="car__feature-btn">Rent Now</button>
-                                    </div>
-                                </div>
-                                <div class="car__item">
-                                    <img src="./images/car-4.jpg" alt="img" class="car__img" width="265px">
-                                    <h3 class="car__item-title">Audi Q7</h3>
-                                    <div class="car__price">
-                                        <div class="car__price-full">$90,900</div>
-                                        <div class="car__price-month">$900<span>/month</span></div>
-                                    </div>
-                                    <div class="car__feature">
-                                        <div class="car__feature-mileage">15k</div>
-                                        <div class="car__feature-transmission">Auto</div>
-                                        <div class="car__feature-fuel">Diesel</div>
-                                    </div>
-                                    <div class="car__feature-wrapper">
-                                        <button class="car__feature-btn">Rent Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="car__arrow">
-                                <div class="car__arrow-left">
-                                    <img src="./images/icons/car-arrow-left.svg" alt="arrow">
-                                </div>
-                                <div class="car__arrow-right">
-                                    <img src="./images/icons/car-arrow-right.svg" alt="arrow">
                                 </div>
                             </div>
                         </div>
@@ -309,13 +400,19 @@
                         </div>
                         <div class="investors__company">
                             <div class="investors__company-wrapper">
-                                <img src="./images/investor_company-1.svg" alt="" class="investors__company-img">
+                                <a href="#" class="investors__company-link">
+                                    <img src="./images/investor_company-1.svg" alt="" class="investors__company-img">
+                                </a>
                             </div>
                             <div class="investors__company-wrapper">
-                                <img src="./images/investor_company-2.svg" alt="" class="investors__company-img">
+                                <a href="#" class="investors__company-link">
+                                    <img src="./images/investor_company-2.svg" alt="" class="investors__company-img">
+                                </a>
                             </div>
                             <div class="investors__company-wrapper">
-                                <img src="./images/investor_company-3.svg" alt="" class="investors__company-img">
+                                <a href="#" class="investors__company-link">
+                                    <img src="./images/investor_company-3.svg" alt="" class="investors__company-img">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -351,7 +448,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
-                    <div class="logo">
+                    <div class="footer__logo">
                         <a href="#" class="logo__link">
                             <img src="./images/logo.svg" alt="logo" class="logo__img">
                         </a>
@@ -402,5 +499,9 @@
             </div>
         </footer>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ html, body {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -22,24 +23,50 @@ html, body {
     margin: 0 auto;
 }
 
+.hide {
+    animation-name: a1;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes a1 {
+    50% {
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+    }
+
+    100% {
+        min-height: 0;
+        max-width: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+    }
+}
+
 .title {
     font-weight: 600;
     font-size: 48px;
     line-height: 72px;
 }
 
-.header__inner {
+.nav {
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
-    padding: 30px 0;
+}
+
+.logo {
+    width: 105px;
+    height: 45px;
 }
 
 .menu {
-    margin-right: 100px;
-}
-
-.menu__list {
     display: flex;
+    margin-right: 100px;
 }
 
 .menu__item + .menu__item {
@@ -63,6 +90,10 @@ html, body {
 .auth__link:hover {
     background: #E23D3D;
     color: #FFF;
+}
+
+.menu__btn, .menu__mobile{
+    display: none;
 }
 
 .intro {
@@ -109,15 +140,14 @@ html, body {
 }
 
 .intro__panel {
-    background-color: #FFF;
-    padding: 0 50px;
+    background-color: #EFEFEF;
+    padding: 30px 50px;
     border-radius: 14px;
     color: #858181;
     max-width: 1030px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    height: 108px;
     align-items: center;
 }
 
@@ -396,6 +426,17 @@ html, body {
     border: 1px solid #CCCCCC;
     border-radius: 7px;
     cursor: pointer;
+    transition: all .5s;
+    max-width: 123px;
+}
+
+.mixitup-control-active {
+    background: #E23D3D;
+    color: #FFF;
+}
+
+.swiper-container {
+    overflow: hidden;
 }
 
 .car__box {
@@ -407,6 +448,7 @@ html, body {
     padding: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     border-radius: 14px;
+    max-width: 310px;
 }
 
 .car__img {
@@ -688,6 +730,7 @@ html, body {
     max-width: 1012px;
     margin: 0 auto;
     margin-bottom: 138px;
+    flex-wrap: wrap;
 }
 
 .investors__box::after {
@@ -703,6 +746,10 @@ html, body {
 .investors__item {
     max-width: 193px;
     text-align: center;
+}
+
+.investors__img {
+    max-width: 100%;
 }
 
 .investors__name {
@@ -723,6 +770,7 @@ html, body {
 .investors__company {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 605px;
     margin: 0 auto;
     margin-bottom: 400px;
@@ -783,7 +831,6 @@ input {
 }
 
 .form__email {
-    max-width: 332px;
     width: 100%;
     height: 53px;
     font-weight: 500;
@@ -794,7 +841,6 @@ input {
 }
 
 .form__tel {
-    max-width: 332px;
     width: 100%;    
     height: 53px;
 }
@@ -831,20 +877,6 @@ input {
     border-radius: 7px;
     color: #FFF;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
     padding-top: 220px;
@@ -897,4 +929,347 @@ input {
 
 .footer__agreement + .footer__agreement {
     margin-left: 40px;
+}
+
+
+@media (max-width: 1300px) {
+    .service__left {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .steps__arrow-top::after, .steps__arrow-down::before {
+        display: none;
+    }
+
+    .service__right::after {
+        left: -20px;
+    }
+    .pricing::after,
+    .budget::after ,    
+    .payment::after,
+    .warrant::before,
+    .assistance::before,
+    .choice::before {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .menu, .auth {
+        display: none;
+    }
+
+    .logo img{
+        width: 80px;
+        z-index: 10;
+    }
+    
+    .menu__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 45px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .menu__btn span {
+        height: 3px;
+        width: 100%;
+        background-color: #000000;
+    }
+
+    .menu__mobile.menu--open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #CCCCCC;
+        height: 100vh;
+        z-index: 5;
+        text-align: center;
+        padding-top: 140px;
+        font-size: 3vh;
+    }
+    
+    .menu__item + .menu__item {
+        margin-top: 3vh;
+        margin-left: 0px;
+    }
+
+    .auth__item + .auth__item {
+        margin-left: 0px;
+    }
+
+    .auth__item {
+        margin-top: 5vh;
+    }
+
+    .menu__link, .auth__link {
+        display: block;
+    }
+
+    .service__right-content {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .intro__panel {
+        display: block;
+        text-align: center;
+        padding: 15px 50px;
+        max-width: 250px;
+    }
+
+    .intro__panel-item {
+       margin: 0;
+       margin-top: 20px;
+    }
+
+    .end-date {
+        margin-bottom: 20px;
+    }
+
+    .customer__car-img {
+        display: none;
+    }
+
+    .customer__car-right, .customer__car-left {
+        padding: 0;
+    }
+
+    .customer__car {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .service__right-content {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .steps__box {
+        display: block;
+    }
+
+    .steps__item {
+        margin-top: 30px;
+    }
+
+    .steps__item-text {
+        margin: 0 auto;
+    }
+
+    .service__right-text {
+        max-width: 200px;
+    }
+
+    .service-left-item {
+        font-size: 16px;
+    }
+
+    .service-left-item::after {
+        width: 39px;
+        height: 39px;
+    }
+
+    .service-left-item::before {
+        top: -2px;
+        left: -2px;
+    }
+
+    .customer {
+        margin-bottom: 200px;
+    }
+
+    .investors__box::after {
+        display: none;
+    }
+
+    .investors__company {
+        margin-bottom: 200px;
+    }
+
+    .footer__menu {
+        display: block;
+    }
+
+    .footer__menu-item + .footer__menu-item {
+        margin-left: 0px;
+    }
+
+    .footer__icons {
+        align-items: start;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer__copyright {
+        text-align: center;
+        display: block;
+    }
+
+    .footer__agreement-wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .service__right {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .customer__car {
+        padding-top: 60px;
+    }
+
+    .customer__car-right, .customer__car-left {
+        margin: 0;
+    }
+
+    .customer__item-title {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .investors__box {
+        justify-content: center;
+    }
+
+    .investors__item {
+        margin-top: 50px;
+    }
+
+    .investors__title {
+        margin-bottom: 10px;
+    }
+
+    .investors__company {
+        display: block;
+        text-align: center;
+    }
+
+    .investors__company-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .footer__inner {
+        display: block;
+    }
+    .footer__menu {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer__icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .intro__inner {
+        padding-top: 30px;
+    }
+
+    .intro__title {
+        margin-bottom: 15px;
+    }
+
+    .service__left {
+        margin-left: 10px;
+    }
+
+    .car__feature-btn {
+        font-size: 16px;
+    }
+
+    .car__inner {
+        margin-bottom: 200px;
+    }
+    
+    .customer__car {
+        display: block;
+    }
+
+    .customer__item {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .customer__item-title {
+        padding-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .customer__car-right {
+        margin-top: 50px;
+    }
+
+    .investors__job {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    .investors__name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .form__wrapper {
+        display: block;
+    }
+
+    .form__tel-wrapper {
+        margin-top: 30px;
+    }
+
+    .contacts__title {
+        font-size: 30px;
+        line-height: 100%;
+    }
+
+    .form__email-wrapper, .form__tel-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media (max-height: 600px) {
+    
+    .intro__panel {
+        margin-top: -50px;
+    }
+
+    .steps {
+        padding-top: 150px;  
+    }
 }
